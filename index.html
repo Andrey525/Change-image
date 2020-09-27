@@ -7,23 +7,16 @@
     <title>Лабораторная 2.1</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="img/icon.png" />
-    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Nanum+Myeongjo&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&
+        family=Nanum+Myeongjo&display=swap" rel="stylesheet" />
 </head>
 
 <body style="background: url(img/wood-pane.jpg)">
     <script language="JavaScript">
         function set_image(image_url_malina) {
-            const url = new URL(document.Left.src);
-            if (document.Left.src.indexOf(image_url_malina) != -1) {
-                // document.Left.src = image_url_smorodina;
-                var temp = document.Left.src;
-                document.Left.src = document.Right.src;
-                document.Right.src = temp;
-            } else {
-                var temp = document.Left.src;
-                document.Left.src = document.Right.src;
-                document.Right.src = temp;
-            }
+            var temp = document.Left.src;
+            document.Left.src = document.Right.src;
+            document.Right.src = temp;
         }
     </script>
 
