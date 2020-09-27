@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Лабораторная 2.1</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/icon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Nanum+Myeongjo&display=swap" rel="stylesheet" />
+</head>
+
+<body style="background: url(img/wood-pane.jpg)">
+    <script language="JavaScript">
+        function set_image(image_url_one, image_url_two) {
+            const url = new URL(document.Malina.src);
+            if (url.pathname == image_url_two) {
+                document.Malina.src = image_url_one;
+                document.Smorodina.src = image_url_two;
+            } else {
+                document.Malina.src = image_url_two;
+                document.Smorodina.src = image_url_one;
+            }
+        }
+    </script>
+
+    <form name=" form1 " style="text-align: center">
+        <h1 style="
+          margin-top: 50px;
+          text-align: center;
+          font-style: italic;
+          color: rgb(11, 97, 112);
+          font-family: Nanum Myeongjo;
+        ">
+            Нажмите кнопку, чтобы поменять изображения местами!
+        </h1>
+        <ul>
+            <li class="list">
+                <img name="Malina" src="img/malina.png" alt="Malina img" class="image" />
+            </li>
+            <li class="list">
+                <img name="Smorodina" src="img/smorodina.png" alt="Smorodina img" class="image" />
+            </li>
+        </ul>
+        <input type="button" value="Change image" onClick="set_image( '/img/smorodina.png', '/img/malina.png')" />
+    </form>
+</body>
+
+</html>

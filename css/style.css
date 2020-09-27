@@ -1,0 +1,30 @@
+.image {
+    width: 300px;
+    margin-top: 100px;
+}
+
+.list {
+    list-style: none;
+    display: inline-block;
+    padding: 0 80px;
+    justify-content: space-between;
+    /* padding: 120px; */
+}
+
+input[type="button"] {
+    height: 50px;
+    width: 200px;
+    color: rgb(15, 176, 204);
+    background-color: rgb(16, 47, 77);
+    border-color: rgb(15, 176, 204);
+    border-width: 3px;
+    border-style: solid;
+    font-family: Kaushan Script;
+    font-size: 24px;
+    border-radius: 20px;
+    margin-top: 100px;
+}
+
+input[type="button"]:focus {
+    outline: none;
+}
