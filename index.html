@@ -13,7 +13,7 @@
 
 <body style="background: url(img/wood-pane.jpg)">
     <script language="JavaScript">
-        function set_image(image_url_malina) {
+        function set_image() {
             var temp = document.Left.src;
             document.Left.src = document.Right.src;
             document.Right.src = temp;
@@ -38,7 +38,7 @@
                 <img name="Right" src="img/smorodina.png" alt="right img" class="image" />
             </li>
         </ul>
-        <input type="button" value="Change image" onClick="set_image( '/img/malina.png')" />
+        <input type="button" value="Change image" onClick="set_image( )" />
     </form>
 </body>
 
