@@ -28,3 +28,21 @@ input[type="button"] {
 input[type="button"]:focus {
     outline: none;
 }
+
+input[type="button"]:hover {
+    background: rgb(12, 36, 59);
+    color: rgb(165, 165, 23);
+    border-color: rgb(27, 80, 133);
+}
+
+input[type="button"]:active {
+    background-color: rgb(165, 165, 23);
+    border-color: rgb(12, 36, 59);
+    color: rgb(12, 36, 59);
+}
+
+@media (max-width: 540px) {
+    .list {
+        padding: 0;
+    }
+}

@@ -12,14 +12,17 @@
 
 <body style="background: url(img/wood-pane.jpg)">
     <script language="JavaScript">
-        function set_image(image_url_one, image_url_two) {
-            const url = new URL(document.Malina.src);
-            if (url.pathname == image_url_two) {
-                document.Malina.src = image_url_one;
-                document.Smorodina.src = image_url_two;
+        function set_image(image_url_malina) {
+            const url = new URL(document.Left.src);
+            if (document.Left.src.indexOf(image_url_malina) != -1) {
+                // document.Left.src = image_url_smorodina;
+                var temp = document.Left.src;
+                document.Left.src = document.Right.src;
+                document.Right.src = temp;
             } else {
-                document.Malina.src = image_url_two;
-                document.Smorodina.src = image_url_one;
+                var temp = document.Left.src;
+                document.Left.src = document.Right.src;
+                document.Right.src = temp;
             }
         }
     </script>
@@ -32,17 +35,17 @@
           color: rgb(11, 97, 112);
           font-family: Nanum Myeongjo;
         ">
-            Нажмите кнопку, чтобы поменять изображения местами!
+            Нажмите на кнопку, чтобы поменять изображения местами!
         </h1>
         <ul>
             <li class="list">
-                <img name="Malina" src="img/malina.png" alt="Malina img" class="image" />
+                <img name="Left" src="img/malina.png" alt="left img" class="image" />
             </li>
             <li class="list">
-                <img name="Smorodina" src="img/smorodina.png" alt="Smorodina img" class="image" />
+                <img name="Right" src="img/smorodina.png" alt="right img" class="image" />
             </li>
         </ul>
-        <input type="button" value="Change image" onClick="set_image( '/img/smorodina.png', '/img/malina.png')" />
+        <input type="button" value="Change image" onClick="set_image( '/img/malina.png')" />
     </form>
 </body>
 
